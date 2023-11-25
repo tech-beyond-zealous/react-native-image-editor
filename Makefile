@@ -1,5 +1,5 @@
 # create git tag
-VERSION := 0.6.0
+VERSION := 0.6.1
 GIT_COMMIT_MESSAGE := "Update pod name and readme"
 npm-version:
 	@echo "Updating version..."
