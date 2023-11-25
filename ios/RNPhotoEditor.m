@@ -1,6 +1,7 @@
 
 #import "RNPhotoEditor.h"
 
+
 @implementation RNPhotoEditor
 
 - (dispatch_queue_t)methodQueue
@@ -50,7 +51,10 @@ RCT_EXPORT_METHOD(Edit:(nonnull NSDictionary *)props onDone:(RCTResponseSenderBl
         _onCancelEditing = onCancel;
 
         PhotoEditorViewController *photoEditor = [[PhotoEditorViewController alloc] initWithNibName:@"PhotoEditorViewController" bundle: [NSBundle bundleForClass:[PhotoEditorViewController class]]];
-
+        // set language
+        NSDictionary *languages = [props objectForKey: @"languages"];
+        [[TranslationService shared]  initTranslations:languages];
+        
         // Process Image for Editing
         UIImage *image = [UIImage imageWithContentsOfFile:_editImagePath];
         if (image == nil) {

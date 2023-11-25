@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {Image} from 'react-native';
 import PhotoEditor from 'react-native-photo-editor';
 import RNFS from 'react-native-fs';
-import RNFetchBlob from 'rn-fetch-blob';
+import RNFetchBlob from 'react-native-blob-util';
 
 type Props = {
   path: string;
@@ -61,7 +61,7 @@ export default class App extends Component<Props> {
           .then(() => {
             console.log('FILE WRITTEN!');
           })
-          .catch((err) => {
+          .catch(err => {
             console.log(err.message);
           });
       })

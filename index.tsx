@@ -2,12 +2,29 @@ import { NativeModules } from 'react-native'
 
 const { RNPhotoEditor } = NativeModules
 
+type Language = {
+    doneTitle?: string
+    saveTitle?: string
+    clearAllTitle?: string
+    cameraTitle?: string
+    galleryTitle?: string
+    uploadDialogTitle?: string
+    uploadPickerTitle?: string
+    directoryCreateFail?: string
+    accessMediaPermissionsMsg?: string
+    continueTxt?: string
+    notNow?: string
+    mediaAccessDeniedMsg?: string
+    saveImageSucceed?: string
+    eraserTitle?: string
+}
+
 export interface PhotoEditorProps {
     path: string
     colors?: string[]
     stickers?: string[]
     hiddenControls?: ('text' | 'clear' | 'draw' | 'save' | 'share' | 'sticker' | 'crop')[]
-
+    languages: Language
     onDone?: (imagePath: string) => void
     onCancel?: (resultCode: number) => void
 }
@@ -30,13 +47,30 @@ export default class PhotoEditor {
             '#00ffff',
             '#a52a2a',
             '#ff00ff'
-        ]
+        ],
+        languages: {
+            doneTitle: 'Done',
+            saveTitle: 'Save',
+            clearAllTitle: 'Clear all',
+            cameraTitle: 'Camera',
+            galleryTitle: 'Gallery',
+            uploadDialogTitle: 'Upload Image',
+            uploadPickerTitle: 'Select Picture',
+            directoryCreateFail: 'Failed to create directory',
+            accessMediaPermissionsMsg: 'To attach photos, we need to access media on your device',
+            continueTxt: 'Continue',
+            notNow: 'NOT NOW',
+            mediaAccessDeniedMsg: 'You denied storage access, no photos will be added.',
+            saveImageSucceed: 'Image saved',
+            eraserTitle: 'Eraser'
+        }
     }
 
     static Edit({
         stickers,
         hiddenControls,
         colors,
+        languages,
         onDone,
         onCancel,
         ...props
@@ -51,8 +85,14 @@ export default class PhotoEditor {
             colors = this.defaultProps.colors
         }
 
+        if (languages !== undefined) {
+            languages = { ...this.defaultProps.languages, ...languages }
+        } else {
+            languages = this.defaultProps.languages
+        }
+
         RNPhotoEditor.Edit(
-            { colors, hiddenControls, stickers, ...props },
+            { colors, hiddenControls, stickers, languages, ...props },
             (imagePath: string) => {
                 onDone && onDone(imagePath)
             },
