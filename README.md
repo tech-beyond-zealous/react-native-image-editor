@@ -31,7 +31,7 @@ This library is a React Native bridge around native photo editor libraries. It a
 
 ## 📖 Getting started
 
-`$ yarn add react-native-image-editor`
+`$ yarn add @thienmd/react-native-image-editor`
 
 > This library is supported React Native V61 and above
 
@@ -44,10 +44,10 @@ This library is a React Native bridge around native photo editor libraries. It a
 ```
   use_native_modules!
 
-  pod 'RNPhotoEditor', :path => '../node_modules/react-native-image-editor/ios'
+  pod 'RNPhotoEditor', :path => '../node_modules/@thienmd/react-native-image-editor/ios'
 
   use_frameworks! :linkage => :static
-  pod 'iOSPhotoEditor', :path => '../node_modules/react-native-image-editor/photo-editor'
+  pod 'iOSPhotoEditor', :path => '../node_modules/@thienmd/react-native-image-editor/photo-editor'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
@@ -138,9 +138,9 @@ If you want stickers, please add them to your native project:
 ## 💻 Usage
 
 ```
-import PhotoEditor from 'react-native-image-editor'
+import ImageEditor from '@thienmd/react-native-image-editor'
 
-PhotoEditor.Edit({
+ImageEditor.Edit({
     path: RNFS.DocumentDirectoryPath + "/photo.jpg"
 });
 ```
@@ -191,7 +191,7 @@ $RNFirebaseAsStaticFramework = true
 
 - Android Image Editor: [eventtus/photo-editor-android](https://github.com/eventtus/photo-editor-android)
 - iOS Image Editor: [eventtus/photo-editor](https://github.com/eventtus/photo-editor)
-
+- react-native-photo-editor: [prscX/react-native-photo-editor](https://github.com/prscX/react-native-photo-editor)
 ## 🤔 How to contribute
 Have an idea? Found a bug? Please raise to [ISSUES](https://github.com/ThienMD/react-native-image-editor/issues).
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
@@ -200,22 +200,9 @@ Contributions are welcome and are greatly appreciated! Every little bit helps, a
 If you are using this library in one of your projects, add it in this list below. ✨
 
 
-## 📜 License
-This library is provided under the Apache 2 License.
-
-RNPhotoEditor @ [prscX](https://github.com/prscX)
-
 ## 💖 Support my projects
 I open-source almost everything I can, and I try to reply everyone needing help using these projects. Obviously, this takes time. You can integrate and use these projects in your applications for free! You can even change the source code and redistribute (even resell it).
 
 However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
 * Starring and sharing the projects you like 🚀
 * If you're feeling especially charitable, please follow [prscX](https://github.com/prscX) on GitHub.
-
-  <a href="https://www.buymeacoffee.com/prscX" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-
-  Thanks! ❤️
-  <br/>
-  [prscX.github.io](https://prscx.github.io)
-  <br/>
-  </ Pranav >

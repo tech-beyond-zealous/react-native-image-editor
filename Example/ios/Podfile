@@ -45,7 +45,7 @@ target "Example" do
     :app_path => "#{Pod::Config.instance.installation_root}/..",
   )
   pod "iOSPhotoEditor", :path => "../../photo-editor"
-  pod "RNPhotoEditor", :path => "../../ios"
+  pod "RNImageEditor", :path => "../../ios"
   pod "react-native-blob-util",
       :path => "../node_modules/react-native-blob-util"
   target "ExampleTests" do

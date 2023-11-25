@@ -490,7 +490,7 @@ PODS:
     - React-perflogger (= 0.72.7)
   - RNFS (2.18.0):
     - React
-  - RNPhotoEditor (1.0.13):
+  - RNImageEditor (0.5.0):
     - iOSPhotoEditor
     - React
   - SocketRocket (0.6.1)
@@ -564,7 +564,7 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNFS (from `../node_modules/react-native-fs`)
-  - RNPhotoEditor (from `../../ios`)
+  - RNImageEditor (from `../../ios`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -668,7 +668,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNFS:
     :path: "../node_modules/react-native-fs"
-  RNPhotoEditor:
+  RNImageEditor:
     :path: "../../ios"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
@@ -690,7 +690,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 9180d43df05c1ed658a87cc733dc3044cf90c00a
-  iOSPhotoEditor: 0f36d2c064d2999b7f4cd20c9db679581d24f7bf
+  iOSPhotoEditor: c919d98d037167ddb5204cca500d6382a315fa2c
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
@@ -727,11 +727,11 @@ SPEC CHECKSUMS:
   React-utils: 56838edeaaf651220d1e53cd0b8934fb8ce68415
   ReactCommon: 5f704096ccf7733b390f59043b6fa9cc180ee4f6
   RNFS: 3ab21fa6c56d65566d1fb26c2228e2b6132e5e32
-  RNPhotoEditor: dae3b766e42ff5c184e74be0a95ff6af107a5ecc
+  RNImageEditor: 9cbbfea7ae3a1f06628d69bae6a165aba76aa327
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 4c3aa327e4a6a23eeacd71f61c81df1bcdf677d5
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: df8dcfbc9d965d2dfde3e3b91d6402de4d965d5f
+PODFILE CHECKSUM: 4f6f7fc406b7455bbf85d8f7f5e642e010e8bfb4
 
 COCOAPODS: 1.14.2
