@@ -891,7 +891,7 @@ public class PhotoEditorActivity
     }
 
     private String getTmpDir(Activity activity) {
-        String tmpDir = activity.getCacheDir() + "/react-native-photo-editor";
+        String tmpDir = activity.getCacheDir() + "/react-native-image-editor";
         new File(tmpDir).mkdir();
 
         return tmpDir;
