@@ -44,7 +44,7 @@ target "Example" do
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/..",
   )
-  pod "iOSPhotoEditor", :path => "../../photo-editor"
+  pod "iOSPhotoEditor", :git => "https://github.com/ThienMD/photo-editor", :branch => "master"
   pod "RNImageEditor", :path => "../../ios"
   pod "react-native-blob-util",
       :path => "../node_modules/react-native-blob-util"

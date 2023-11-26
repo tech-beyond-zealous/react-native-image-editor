@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-image-editor"><img src="http://img.shields.io/npm/v/react-native-image-editor.svg?style=flat" /></a>
+  <a href="https://www.npmjs.com/package/@thienmd/react-native-image-editor"><img src="http://img.shields.io/npm/v/react-native-image-editor.svg?style=flat" /></a>
   <a href="https://github.com/ThienMD/react-native-image-editor/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
   <a href="https://github.com/ThienMD/react-native-image-editor#License"><img src="https://img.shields.io/npm/l/react-native-image-editor.svg?style=flat" /></a>
 </p>
@@ -47,7 +47,7 @@ This library is a React Native bridge around native photo editor libraries. It a
   pod 'RNPhotoEditor', :path => '../node_modules/@thienmd/react-native-image-editor/ios'
 
   use_frameworks! :linkage => :static
-  pod 'iOSPhotoEditor', :path => '../node_modules/@thienmd/react-native-image-editor/photo-editor'
+  pod "iOSPhotoEditor", :git => "https://github.com/ThienMD/photo-editor", :branch => "master"
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

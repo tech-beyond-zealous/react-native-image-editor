@@ -1,6 +1,6 @@
 # create git tag
-VERSION := 0.6.2
-GIT_COMMIT_MESSAGE := "Update pod name and readme"
+VERSION := 0.6.3
+GIT_COMMIT_MESSAGE := "Update features and fix bugs"
 .PHONY: all git-push-all tag npm-version npm-publish
 
 npm-version:
@@ -16,7 +16,7 @@ git-push-all:
 	git commit -m $(GIT_COMMIT_MESSAGE)
 	git push origin master
 
-all: git-push-all tag npm-version npm publish
+all: git-push-all tag npm-version npm-publish
 
 npm-publish:
 	npm publish
