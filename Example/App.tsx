@@ -17,7 +17,7 @@ type Props = {
 export default class App extends Component<Props> {
   _onPress = () => {
     ImageEditor.Edit({
-      path: RNFS.DocumentDirectoryPath + '/photo.jpg',
+      path: RNFS.DocumentDirectoryPath + '/photo1.jpg',
       stickers: [
         'sticker0',
         'sticker1',
@@ -51,7 +51,7 @@ export default class App extends Component<Props> {
   };
 
   componentDidMount() {
-    let photoPath = RNFS.DocumentDirectoryPath + '/photo.jpg';
+    let photoPath = RNFS.DocumentDirectoryPath + '/photo1.jpg';
     let binaryFile = Image.resolveAssetSource(require('./assets/photo.jpg'));
 
     RNFetchBlob.config({fileCache: true})
