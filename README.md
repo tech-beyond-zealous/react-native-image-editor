@@ -79,8 +79,6 @@ Please note that the API of this library might be different from `react-native-p
 ```
   use_native_modules!
 
-  pod 'RNPhotoEditor', :path => '../node_modules/@thienmd/react-native-image-editor/ios'
-
   use_frameworks! :linkage => :static
   pod "iOSPhotoEditor", :git => "https://github.com/ThienMD/photo-editor", :branch => "master"
 
