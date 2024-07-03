@@ -1,5 +1,5 @@
 # create git tag
-VERSION := 0.6.5
+VERSION := 0.6.1
 GIT_COMMIT_MESSAGE := "Update features and fix bugs"
 .PHONY: all git-push-all tag npm-version npm-publish
 
